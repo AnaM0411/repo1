@@ -76,11 +76,17 @@ WSGI_APPLICATION = 'proyectodeprueba.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'proyectodepracticaMio',
+        'USER': 'AnaM',
+        'PASSWORD': 'fatiga1995',
+        'HOST': 'localhost\SQLEXPRESS',
+        'PORT':'',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server'
+        },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
